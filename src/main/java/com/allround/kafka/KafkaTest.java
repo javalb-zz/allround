@@ -9,6 +9,8 @@ public class KafkaTest {
 
     private ProducerDemo producerDemo = new ProducerDemo();
     private ConsumerDemo consumerDemo = new ConsumerDemo();
+    private ProducerAdvance pa = new ProducerAdvance();
+    private ConsumerAdvance ca = new ConsumerAdvance();
 
     @Test
     public void sendMessage() {
@@ -20,6 +22,15 @@ public class KafkaTest {
         consumerDemo.receMessage();
     }
 
+    @Test
+    public void sendMessageAdv() {
+        pa.sendMessage();
+    }
+
+    @Test
+    public void receiveMessageAdv() {
+        ca.receMessage();
+    }
 
 
 }
